@@ -67,7 +67,7 @@ public class MainGlassfish {
 	Deployer deployer = glassfish.getDeployer();
 
 	// Create a scattered web application.
-	ScatteredArchive archive = new ScatteredArchive("myApp",
+	ScatteredArchive archive = new ScatteredArchive("Crunchify",
 	ScatteredArchive.Type.WAR, new File(webappDirLocation));
         // target/classes directory contains my complied servlets
 	archive.addClassPath(new File("target", "classes"));
