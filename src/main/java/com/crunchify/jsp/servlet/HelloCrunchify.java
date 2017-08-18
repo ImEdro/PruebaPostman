@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -16,6 +18,15 @@ import java.util.logging.Logger;
  */
  
 public class HelloCrunchify extends HttpServlet {
+    @Override
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    PersonaJpaController controller=new PersonaJpaController();
+    List<Persona> list = controller.findPersonaEntities();
+    String json = new Gson().toJson(list);
+    response.setContentType("application/json");
+    response.setCharacterEncoding("UTF-8");
+    response.getWriter().write(json);
+}
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name=request.getParameter("name");
         String surname=request.getParameter("surname");
