@@ -30,6 +30,7 @@ body {
         <title>SO question 4112686</title>
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script>
+            $select.find("table").detach();
             $(document).on("click", "#somebutton", function() {        // When HTML DOM "click" event is invoked on element with ID "somebutton", execute the following function...
                 $.get("CrunchifyServlet", function(responseJson) {          // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
                 var $table = $("<table>").appendTo($("#somediv")); // Create HTML <table> element and append it to HTML DOM element with ID "somediv".
