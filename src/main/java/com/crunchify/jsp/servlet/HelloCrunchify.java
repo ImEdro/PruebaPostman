@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
  
 public class HelloCrunchify extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name=(String) request.getAttribute("name");
         String surname=(String) request.getAttribute("surname");
         String phone=(String) request.getAttribute("phone");
