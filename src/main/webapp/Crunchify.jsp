@@ -18,8 +18,8 @@ body {
     <div align="center" style="margin-top: 50px;">
  
         <form action="CrunchifyServlet" method="post">
-            Please enter your Name:  <input type="text" name="username" size="20px"> <br>
-            Please enter your Surname:  <input type="text" name="password" size="20px"> <br><br>
+            Please enter your Name:  <input type="text" name="name" size="20px"> <br>
+            Please enter your Surname:  <input type="text" name="surname" size="20px"> <br><br>
             Please enter your Phone Number:  <input type="text" name="phone" size="20px"> <br><br>
             Please enter your Mobile Phone Number:  <input type="text" name="mobile" size="20px"> <br><br>
         <input type="submit" value="submit">
