@@ -32,9 +32,9 @@ body {
         <script>
             $(document).on("click", "#somebutton", function() {        // When HTML DOM "click" event is invoked on element with ID "somebutton", execute the following function...
         $.get("CrunchifyServlet", function(responseJson) {          // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
-        var $dinamictable = $("<table>").appendTo($("#somediv")); // Create HTML <table> element and append it to HTML DOM element with ID "somediv".
+        var $table = $("<table>").appendTo($("#somediv")); // Create HTML <table> element and append it to HTML DOM element with ID "somediv".
         $.each(responseJson, function(index, persona) {    // Iterate over the JSON array.
-            $("<tr>").appendTo($dinamictable)                     // Create HTML <tr> element, set its text content with currently iterated item and append it to the <table>.
+            $("<tr>").appendTo($table)                     // Create HTML <tr> element, set its text content with currently iterated item and append it to the <table>.
                 .append($("<td>").text(persona.nombre))        // Create HTML <td> element, set its text content with id of currently iterated product and append it to the <tr>.
                 .append($("<td>").text(persona.apellido))      // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
                 .append($("<td>").text(persona.telefono)
