@@ -37,7 +37,8 @@ body {
             $("<tr>").appendTo($table)                     // Create HTML <tr> element, set its text content with currently iterated item and append it to the <table>.
                 .append($("<td>").text(persona.nombre))        // Create HTML <td> element, set its text content with id of currently iterated product and append it to the <tr>.
                 .append($("<td>").text(persona.apellido))      // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
-                .append($("<td>").text(persona.telefono));    // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
+                .append($("<td>").text(persona.telefono)
+                .append($("<td>").text(persona.celular));    // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
         });
     });
 });
