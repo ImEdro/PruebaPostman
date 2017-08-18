@@ -17,10 +17,10 @@ import java.util.logging.Logger;
  
 public class HelloCrunchify extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name=(String) request.getParameter("name");
-        String surname=(String) request.getParameter("surname");
-        String phone=(String) request.getParameter("phone");
-        String mobile=(String) request.getParameter("mobile");
+        String name=request.getParameter("name");
+        String surname=request.getParameter("surname");
+        String phone=request.getParameter("phone");
+        String mobile=request.getParameter("mobile");
         PersonaJpaController controller=new PersonaJpaController();
         Persona p=new Persona();
         p.setNombre(name);
@@ -32,5 +32,6 @@ public class HelloCrunchify extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(HelloCrunchify.class.getName()).log(Level.SEVERE, null, ex);
         }
+        response.sendRedirect("Crunchify.jsp");
         }
 }
