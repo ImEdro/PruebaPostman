@@ -15,7 +15,6 @@ body {
 <title>Crunchify JSP Servlet Example</title>
 </head>
 <body>
-    holaaaaaaa
     <div align="center" style="margin-top: 50px;">
  
         <form action="CrunchifyServlet">
