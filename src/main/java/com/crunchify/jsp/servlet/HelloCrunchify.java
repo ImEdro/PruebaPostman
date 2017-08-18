@@ -17,10 +17,10 @@ import java.util.logging.Logger;
  
 public class HelloCrunchify extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name=(String) request.getAttribute("name");
-        String surname=(String) request.getAttribute("surname");
-        String phone=(String) request.getAttribute("phone");
-        String mobile=(String) request.getAttribute("mobile");
+        String name=(String) request.getParameter("name");
+        String surname=(String) request.getParameter("surname");
+        String phone=(String) request.getParameter("phone");
+        String mobile=(String) request.getParameter("mobile");
         PersonaJpaController controller=new PersonaJpaController();
         Persona p=new Persona();
         p.setNombre(name);
