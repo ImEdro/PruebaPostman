@@ -112,5 +112,5 @@ public class Persona implements Serializable {
     public String toString() {
         return "VO.Persona[ apellido=" + apellido + " ]";
     }
-    
+
 }
